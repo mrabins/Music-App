@@ -35,14 +35,9 @@ class HTTPClient {
     func downloadImage(url: String) -> (UIImage) {
         let aUrl = NSURL(string: url)
         let data = NSData(contentsOfURL: aUrl!)
+        // Consider adding logic incase optional returns nil
         let image = UIImage(data: data!)
-        if image == nil {
-            return (image)!
-        } else {
-            return image!
-
-        }
-
+        return image!
     }
 }
     

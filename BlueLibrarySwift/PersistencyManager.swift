@@ -18,28 +18,32 @@ class PersistencyManager: NSObject {
         let album1 = Album(title: "Best of Bowie",
                            artist:  "David Bowie",
                            genre:  "Pop",
-                           coverUrl:  "http://www.coversproject.com/static/thumbs/album/album_david%20bowie_best%20of%20bowie.png",
+                           coverUrl: "http://a4.mzstatic.com/us/r30/Music6/v4/e3/e5/22/e3e522f1-7b50-dc6b-d263-60f35d5e14f7/cover170x170.jpeg",
                            year:  "1992")
         
         let album2 = Album(title: "It's My Life",
                            artist: "No Doubt",
                            genre: "Pop",
-                           coverUrl: "http://www.coversproject.com/static/thumbs/album/album_no%20doubt_its%20my%20life%20%20bathwater.png",
+                           coverUrl:"https://images-na.ssl-images-amazon.com/images/I/51AMwXvnnrL.jpg",
                            year: "2003")
         
         let album3 = Album(title: "Nothing Like The Sun",
                            artist: "Sting",
                            genre: "Pop",
-                           coverUrl: "http://www.coversproject.com/static/thumbs/album/album_sting_nothing%20like%20the%20sun.png",
+                           coverUrl: "http://cdn.sting.com/non_secure/images/20110419/discography/nothing_like_the_sun/400.jpg",
                            year: "1999")
         
         let album4 = Album(title: "Staring at the Sun",
                            artist: "U2",
                            genre: "Pop",
-                           coverUrl: "http://www.coversproject.com/static/thumbs/album/album_u2_staring%20at%20the%20sun.png",
+                           coverUrl: "http://eil.com/images/main/U2+Staring+At+The+Sun+-+Sealed+82069.jpg",
                            year: "2000")
         
-        let album5 = Album(title: "American Pie", artist: "Madonna", genre: "Pop", coverUrl: "http://www.coversproject.com/static/thumbs/album/album_madonna_american%20pie.png", year: "2000")
+        let album5 = Album(title: "American Pie",
+                           artist: "Madonna",
+                           genre: "Pop",
+                           coverUrl: "http://4.bp.blogspot.com/_ZTkJMTu5-fQ/SXep_a3tV8I/AAAAAAAAARI/om7tPxO42Co/s400/pie.jpg",
+                           year: "2000")
         
     albums = [album1, album2, album3, album4, album5]
         
