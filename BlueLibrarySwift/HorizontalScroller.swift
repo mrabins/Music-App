@@ -9,31 +9,28 @@
 import UIKit
 
 @objc protocol HorizontalScrollerDelegate {
-    
     // ask the delegate how many views he wants to present inside the horizontal scroller
     func numberOfViewsForHorizontalScroller(scroller: HorizontalScroller) -> Int
-    
-    // Ask the delegate to return the view that should appear at <index>
-    func horizontalScrollerViewAtIndex(scroller: HorizontalScroller, index: Int) -> UIView
-    
+    // ask the delegate to return the view that should appear at <index>
+    func horizontalScrollerViewAtIndex(scroller: HorizontalScroller, index:Int) -> UIView
     // inform the delegate what the view at <index> has been clicked
-    func horizontalScrollerClickedViewAtIndex(scroller: HorizontalScroller, index: Int)
-    
-    // ask the delegate for the index of the inital view to display, this method is optional
-    // and the defaults to 0 if it's not implemented by the delegate
+    func horizontalScrollerClickedViewAtIndex(scroller: HorizontalScroller, index:Int)
+    // ask the delegate for the index of the initial view to display. this method is optional
+    // and defaults to 0 if it's not implemented by the delegate
     optional func initialViewIndex(scroller: HorizontalScroller) -> Int
 }
 
 class HorizontalScroller: UIView {
-    
     weak var delegate: HorizontalScrollerDelegate?
     
+    // 1
     private let VIEW_PADDING = 10
     private let VIEW_DIMENSIONS = 100
     private let VIEWS_OFFSET = 100
     
-    private var scroller: UIScrollView!
-    
+    // 2
+    private var scroller : UIScrollView!
+    // 3
     var viewArray = [UIView]()
     
     override init(frame: CGRect) {
@@ -41,20 +38,19 @@ class HorizontalScroller: UIView {
         initializeScrollView()
     }
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         initializeScrollView()
     }
     
     func initializeScrollView() {
         //1
         scroller = UIScrollView()
+        scroller.delegate = self
         addSubview(scroller)
         
         //2
-//        scroller.translatesAutoresizingMaskIntoConstraints(false)
-
-        
+        scroller.translatesAutoresizingMaskIntoConstraints = false
         //3
         self.addConstraint(NSLayoutConstraint(item: scroller, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: 0.0))
         self.addConstraint(NSLayoutConstraint(item: scroller, attribute: .Trailing, relatedBy: .Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: 0.0))
@@ -62,8 +58,12 @@ class HorizontalScroller: UIView {
         self.addConstraint(NSLayoutConstraint(item: scroller, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: 0.0))
         
         //4
-        let tapRecognizer = UITapGestureRecognizer(target: self, action:#selector(HorizontalScroller.scrollerTapped(_:)))
+        let tapRecognizer = UITapGestureRecognizer(target: self, action:Selector("scrollerTapped:"))
         scroller.addGestureRecognizer(tapRecognizer)
+    }
+    
+    func viewAtIndex(index :Int) -> UIView {
+        return viewArray[index]
     }
     
     func scrollerTapped(gesture: UITapGestureRecognizer) {
@@ -80,14 +80,14 @@ class HorizontalScroller: UIView {
         }
     }
     
-    func viewAtIndex(index: Int) -> UIView {
-        return viewArray[index]
+    override func didMoveToSuperview() {
+        reload()
     }
     
     func reload() {
         // 1 - Check if there is a delegate, if not there is nothing to load.
         if let delegate = delegate {
-            // 2 - Will keep adding new album views on reload, need to reset.
+            //2 - Will keep adding new album views on reload, need to reset.
             viewArray = []
             let views: NSArray = scroller.subviews
             
@@ -95,6 +95,7 @@ class HorizontalScroller: UIView {
             for view in views {
                 view.removeFromSuperview()
             }
+            
             // 4 - xValue is the starting point of the views inside the scroller
             var xValue = VIEWS_OFFSET
             for index in 0..<delegate.numberOfViewsForHorizontalScroller(self) {
@@ -107,7 +108,7 @@ class HorizontalScroller: UIView {
                 // 6 - Store the view so we can reference it later
                 viewArray.append(view)
             }
-            // 7 
+            // 7
             scroller.contentSize = CGSizeMake(CGFloat(xValue + VIEWS_OFFSET), frame.size.height)
             
             // 8 - If an initial view is defined, center the scroller on it
@@ -117,30 +118,15 @@ class HorizontalScroller: UIView {
         }
     }
     
-    override func didMoveToSuperview() {
-        
-    }
-    
     func centerCurrentView() {
-        var xFinal = Int(scroller.contentOffset.x) + (VIEWS_OFFSET / 2) + VIEW_PADDING
-        let viewIndex = xFinal / (VIEW_DIMENSIONS + (2 * VIEW_PADDING))
-        xFinal = viewIndex * (VIEW_DIMENSIONS + (2 * VIEW_PADDING))
-            scroller.setContentOffset(CGPoint(x:  xFinal, y: 0),  animated: true)
+        var xFinal = Int(scroller.contentOffset.x) + (VIEWS_OFFSET/2) + VIEW_PADDING
+        let viewIndex = xFinal / (VIEW_DIMENSIONS + (2*VIEW_PADDING))
+        xFinal = viewIndex * (VIEW_DIMENSIONS + (2*VIEW_PADDING))
+        scroller.setContentOffset(CGPoint(x: xFinal, y: 0), animated: true)
         if let delegate = delegate {
             delegate.horizontalScrollerClickedViewAtIndex(self, index: Int(viewIndex))
-        }
-        
-        
+        }  
     }
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }
 
 extension HorizontalScroller: UIScrollViewDelegate {

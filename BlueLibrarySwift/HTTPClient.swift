@@ -23,20 +23,26 @@
 import UIKit
 
 class HTTPClient {
-	
-	func getRequest(url: String) -> (AnyObject) {
-		return NSData()
-	}
-	
-	func postRequest(url: String, body: String) -> (AnyObject){
-		return NSData()
-	}
-	
-	func downloadImage(url: String) -> (UIImage) {
-		let aUrl = NSURL(string: url)
-		var data = NSData(contentsOfURL: aUrl!)
-		let image = UIImage(data: data!)
-		return image!
-	}
-	
+    
+    func getRequest(url: String) -> (AnyObject) {
+        return NSData()
+    }
+    
+    func postRequest(url: String, body: String) -> (AnyObject){
+        return NSData()
+    }
+
+    func downloadImage(url: String) -> (UIImage) {
+        let aUrl = NSURL(string: url)
+        let data = NSData(contentsOfURL: aUrl!)
+        let image = UIImage(data: data!)
+        if image == nil {
+            return (image)!
+        } else {
+            return image!
+
+        }
+
+    }
 }
+    

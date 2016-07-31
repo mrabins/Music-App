@@ -60,4 +60,27 @@ class PersistencyManager: NSObject {
     func deleteAlbumAtIndex(index: Int) {
         albums.removeAtIndex(index)
     }
+    
+    func saveImage(image: UIImage, filename: String) {
+        let path = NSHomeDirectory().stringByAppendingString("/Documents/\(filename)")
+        let data = UIImagePNGRepresentation(image)
+        data?.writeToFile(path, atomically: true)
+    }
+    
+    func getImage(filename: String) -> UIImage? {
+        var error: NSError?
+        let path = NSHomeDirectory().stringByAppendingString("/Documents\(filename)")
+        let data: NSData?
+        do {
+            data = try NSData(contentsOfFile: path, options: .UncachedRead)
+        } catch let error1 as NSError {
+            error = error1
+            data = nil
+        }
+        if let unwrappedError = error {
+            return nil
+        } else {
+            return UIImage(data: data!)
+        }
+    }
 }
