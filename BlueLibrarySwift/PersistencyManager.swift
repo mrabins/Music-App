@@ -13,6 +13,26 @@ class PersistencyManager: NSObject {
     private var albums = [Album]()
     
     override init() {
+        super.init()
+        if let data = NSData(contentsOfFile: NSHomeDirectory().stringByAppendingString("/Documents/albums.bin")) {
+            let unarchiveAlbums = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! [Album]?
+            if let unwrappedAlbum = unarchiveAlbums {
+                albums = unwrappedAlbum
+            }
+        } else {
+            createPlaceholderAlbum()
+        }
+
+    }
+    
+    
+    func saveAlbums() {
+        let filename = NSHomeDirectory().stringByAppendingString("/Documents/albums.bin")
+        let data = NSKeyedArchiver.archivedDataWithRootObject(albums)
+        data.writeToFile(filename, atomically: true)
+    }
+    
+    func createPlaceholderAlbum() {
         // Dummy list of Albums
         
         let album1 = Album(title: "Best of Bowie",
@@ -45,9 +65,10 @@ class PersistencyManager: NSObject {
                            coverUrl: "http://4.bp.blogspot.com/_ZTkJMTu5-fQ/SXep_a3tV8I/AAAAAAAAARI/om7tPxO42Co/s400/pie.jpg",
                            year: "2000")
         
-    albums = [album1, album2, album3, album4, album5]
-        
+        albums = [album1, album2, album3, album4, album5]
+        saveAlbums()
     }
+    
     
     func getAlbums() -> [Album] {
         return albums
@@ -86,5 +107,6 @@ class PersistencyManager: NSObject {
         } else {
             return UIImage(data: data!)
         }
+
     }
 }

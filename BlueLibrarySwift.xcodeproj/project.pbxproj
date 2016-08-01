@@ -96,7 +96,6 @@
 				13AC87D41D45BF7700C369F8 /* View */,
 				13AC87D51D45BF7F00C369F8 /* Controller */,
 				101DD6CA1A052EDE00161F0D /* AppDelegate.swift */,
-				101DD6CC1A052EDE00161F0D /* ViewController.swift */,
 				101DD6CE1A052EDE00161F0D /* Main.storyboard */,
 				101DD6D11A052EDE00161F0D /* Images.xcassets */,
 				101DD6D31A052EDE00161F0D /* LaunchScreen.xib */,
@@ -151,6 +150,7 @@
 		13AC87D41D45BF7700C369F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				101DD6CC1A052EDE00161F0D /* ViewController.swift */,
 				13AC87D11D448E2900C369F8 /* AlbumView.swift */,
 				138A56311D47300400F6A1FA /* HorizontalScroller.swift */,
 			);
