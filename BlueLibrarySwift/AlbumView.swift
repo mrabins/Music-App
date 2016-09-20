@@ -10,8 +10,8 @@ import UIKit
 
 class AlbumView: UIView {
     
-    private var coverImage: UIImageView!
-    private var indicator: UIActivityIndicatorView!
+    fileprivate var coverImage: UIImageView!
+    fileprivate var indicator: UIActivityIndicatorView!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -21,18 +21,18 @@ class AlbumView: UIView {
     init(frame: CGRect, albumCover: String) {
         super.init(frame: frame)
         commonInit()
-        NSNotificationCenter.defaultCenter().postNotificationName("BLDownloadImageNotification", object: self, userInfo: ["imageView": coverImage, "coverUrl": albumCover])
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "BLDownloadImageNotification"), object: self, userInfo: ["imageView": coverImage, "coverUrl": albumCover])
     }
     
     func commonInit() {
-        backgroundColor = UIColor.blackColor()
+        backgroundColor = UIColor.black
         coverImage = UIImageView(frame: CGRect(x: 5, y: 5, width: frame.size.width - 10, height: frame.size.height - 10))
         addSubview(coverImage)
         coverImage.addObserver(self, forKeyPath: "image", options: [], context: nil)
         
         indicator = UIActivityIndicatorView()
         indicator.center = center
-        indicator.activityIndicatorViewStyle = .WhiteLarge
+        indicator.activityIndicatorViewStyle = .whiteLarge
         indicator.startAnimating()
         addSubview(indicator)
     }
@@ -40,26 +40,20 @@ class AlbumView: UIView {
     deinit {
         coverImage.removeObserver(self, forKeyPath: "image")
     }
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "image" {
             indicator.stopAnimating()
         }
     }
     
-    func highlightAlbum(didHighlightView: Bool) {
+    func highlightAlbum(_ didHighlightView: Bool) {
         if didHighlightView == true {
-            backgroundColor = UIColor.whiteColor()
+            backgroundColor = UIColor.white
         } else {
-            backgroundColor = UIColor.blackColor()
+            backgroundColor = UIColor.black
         }
     }
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+    
+    
 
 }

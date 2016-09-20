@@ -35,18 +35,18 @@ class Album: NSObject, NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         super.init()
-        self.title = aDecoder.decodeObjectForKey("title") as! String
-        self.artist = aDecoder.decodeObjectForKey("artist") as! String
-        self.genre = aDecoder.decodeObjectForKey("genre") as! String
-        self.coverUrl = aDecoder.decodeObjectForKey("cover_url") as! String
-        self.year = aDecoder.decodeObjectForKey("year") as! String
+        self.title = aDecoder.decodeObject(forKey: "title") as! String
+        self.artist = aDecoder.decodeObject(forKey: "artist") as! String
+        self.genre = aDecoder.decodeObject(forKey: "genre") as! String
+        self.coverUrl = aDecoder.decodeObject(forKey: "cover_url") as! String
+        self.year = aDecoder.decodeObject(forKey: "year") as! String
     }
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(title, forKey: "title")
-        aCoder.encodeObject(artist, forKey: "artist")
-        aCoder.encodeObject(genre, forKey: "genre")
-        aCoder.encodeObject(coverUrl, forKey: "cover_url")
-        aCoder.encodeObject(year, forKey: "year")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(title, forKey: "title")
+        aCoder.encode(artist, forKey: "artist")
+        aCoder.encode(genre, forKey: "genre")
+        aCoder.encode(coverUrl, forKey: "cover_url")
+        aCoder.encode(year, forKey: "year")
     }
     
 }

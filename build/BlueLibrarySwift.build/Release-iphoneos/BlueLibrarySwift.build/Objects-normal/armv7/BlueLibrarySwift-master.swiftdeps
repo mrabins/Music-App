@@ -1,0 +1,13 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "9b71eda4c8091b09611087411854358f"
+build_time: [527660177, 993057000]
+inputs:
+  "/Users/markrabins/Documents/DevStuff/iOS/Swift/BlueLibrarySwift/BlueLibrarySwift/ViewController.swift": [9223372036854775807, 0]
+  "/Users/markrabins/Documents/DevStuff/iOS/Swift/BlueLibrarySwift/BlueLibrarySwift/AlbumExtensions.swift": [9223372036854775807, 0]
+  "/Users/markrabins/Documents/DevStuff/iOS/Swift/BlueLibrarySwift/BlueLibrarySwift/AppDelegate.swift": [9223372036854775807, 0]
+  "/Users/markrabins/Documents/DevStuff/iOS/Swift/BlueLibrarySwift/BlueLibrarySwift/LibraryAPI.swift": [9223372036854775807, 0]
+  "/Users/markrabins/Documents/DevStuff/iOS/Swift/BlueLibrarySwift/BlueLibrarySwift/HorizontalScroller.swift": [9223372036854775807, 0]
+  "/Users/markrabins/Documents/DevStuff/iOS/Swift/BlueLibrarySwift/BlueLibrarySwift/HTTPClient.swift": [9223372036854775807, 0]
+  "/Users/markrabins/Documents/DevStuff/iOS/Swift/BlueLibrarySwift/BlueLibrarySwift/AlbumView.swift": [9223372036854775807, 0]
+  "/Users/markrabins/Documents/DevStuff/iOS/Swift/BlueLibrarySwift/BlueLibrarySwift/Album.swift": [9223372036854775807, 0]
+  "/Users/markrabins/Documents/DevStuff/iOS/Swift/BlueLibrarySwift/BlueLibrarySwift/PersistencyManager.swift": [9223372036854775807, 0]

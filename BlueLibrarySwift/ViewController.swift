@@ -28,9 +28,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	@IBOutlet var toolbar: UIToolbar!
     @IBOutlet var scroller: HorizontalScroller!
     
-    private var allAlbums = [Album]()
-    private var currentAlbumData : (titles: [String], values: [String])?
-    private var currentAlbumIndex = 0
+    fileprivate var allAlbums = [Album]()
+    fileprivate var currentAlbumData : (titles: [String], values: [String])?
+    fileprivate var currentAlbumIndex = 0
 
     var undoStack: [(Album, Int)] = []
 	
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
         
-        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.isTranslucent = false
         currentAlbumIndex = 0
         
         allAlbums = LibraryAPI.sharedInstance.getAlbums()
@@ -51,15 +51,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         scroller.delegate = self
         reloadScroller()
         
-        let undoButton = UIBarButtonItem(barButtonSystemItem: .Undo, target: self, action: "undoAction")
-        undoButton.enabled = false
-        let space = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target:  nil, action: nil)
-        let trashButton = UIBarButtonItem(barButtonSystemItem: . Trash, target: self, action: "deleteAlbum")
+        let undoButton = UIBarButtonItem(barButtonSystemItem: .undo, target: self, action: #selector(ViewController.undoAction))
+        undoButton.isEnabled = false
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target:  nil, action: nil)
+        let trashButton = UIBarButtonItem(barButtonSystemItem: . trash, target: self, action: #selector(ViewController.deleteAlbum))
         let toolbarButtonItems = [undoButton, space, trashButton]
         toolbar.setItems(toolbarButtonItems, animated: true)
     }
     
-    func showDataFromAlbum(albumIndex: Int) {
+    func showDataFromAlbum(_ albumIndex: Int) {
         
         //defensive code: make sure the requested index is lower than the amount of albums
         if (albumIndex < allAlbums.count && albumIndex > -1) {
@@ -73,10 +73,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         dataTable!.reloadData()
     }
     
-    func initialViewIndex(scroller: HorizontalScroller) -> Int {
+    func initialViewIndex(_ scroller: HorizontalScroller) -> Int {
         return currentAlbumIndex
     }
-        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             if let albumData = currentAlbumData {
                 return albumData.titles.count
             } else {
@@ -84,11 +84,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
         
-        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) 
             if let albumData = currentAlbumData {
-                cell.textLabel!.text = albumData.titles[indexPath.row]
-                cell.detailTextLabel!.text = albumData.values[indexPath.row]
+                cell.textLabel!.text = albumData.titles[(indexPath as NSIndexPath).row]
+                cell.detailTextLabel!.text = albumData.values[(indexPath as NSIndexPath).row]
             }
             return cell
         }
@@ -100,7 +100,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 }
 
 extension ViewController: HorizontalScrollerDelegate {
-    func horizontalScrollerClickedViewAtIndex(scroller: HorizontalScroller, index: Int) {
+    func horizontalScrollerClickedViewAtIndex(_ scroller: HorizontalScroller, index: Int) {
         //1
         let previousAlbumView = scroller.viewAtIndex(currentAlbumIndex) as! AlbumView
         previousAlbumView.highlightAlbum(false)
@@ -113,11 +113,11 @@ extension ViewController: HorizontalScrollerDelegate {
         (index)
     }
     
-    func  numberOfViewsForHorizontalScroller(scroller: HorizontalScroller) -> Int {
+    func  numberOfViewsForHorizontalScroller(_ scroller: HorizontalScroller) -> Int {
         return allAlbums.count
     }
     
-    func horizontalScrollerViewAtIndex(scroller: HorizontalScroller, index: Int) -> UIView {
+    func horizontalScrollerViewAtIndex(_ scroller: HorizontalScroller, index: Int) -> UIView {
         let album = allAlbums[index]
         let albumView = AlbumView(frame:  CGRect(x: 0, y: 0, width: 100, height: 100), albumCover: album.coverUrl)
         if currentAlbumIndex == index {
@@ -141,26 +141,26 @@ extension ViewController: HorizontalScrollerDelegate {
     
     //MARK: Memento Pattern
     func saveCurrentState(){
-        NSUserDefaults.standardUserDefaults().setInteger(currentAlbumIndex, forKey: "currentAlbumIndex")
+        UserDefaults.standard.set(currentAlbumIndex, forKey: "currentAlbumIndex")
         LibraryAPI.sharedInstance.saveAlbums()
 
     }
     func loadPreviousState() {
-        currentAlbumIndex = NSUserDefaults.standardUserDefaults().integerForKey("currentAlbumIndex")
+        currentAlbumIndex = UserDefaults.standard.integer(forKey: "currentAlbumIndex")
         showDataFromAlbum(currentAlbumIndex)
     }
     
-    func addAlbumAtIndex(album: Album, index: Int) {
+    func addAlbumAtIndex(_ album: Album, index: Int) {
         LibraryAPI.sharedInstance.addAlbum(album, index: index)
         currentAlbumIndex = index
         reloadScroller()
     }
     
     func deleteAlbum() {
-        var deletedAlbum : Album = allAlbums[currentAlbumIndex]
+        let deletedAlbum : Album = allAlbums[currentAlbumIndex]
         
-        var undoAction = (deletedAlbum, currentAlbumIndex)
-        undoStack.insert(undoAction, atIndex: 0)
+        let undoAction = (deletedAlbum, currentAlbumIndex)
+        undoStack.insert(undoAction, at: 0)
         
         LibraryAPI.sharedInstance.deleteAlbum(currentAlbumIndex)
         reloadScroller()
@@ -169,12 +169,12 @@ extension ViewController: HorizontalScrollerDelegate {
     
         
             
-        var undoButton : UIBarButtonItem = barButtonItems[0]
-        undoButton.enabled = true
+        let undoButton : UIBarButtonItem = barButtonItems[0]
+        undoButton.isEnabled = true
         
         if (allAlbums.count) == 0 {
-            var trashButton : UIBarButtonItem = barButtonItems[2]
-            trashButton.enabled = false
+            let trashButton : UIBarButtonItem = barButtonItems[2]
+            trashButton.isEnabled = false
         }
 
     }
@@ -183,16 +183,18 @@ extension ViewController: HorizontalScrollerDelegate {
         let barButtonItems = toolbar.items! as [UIBarButtonItem]
         
         if undoStack.count > 0 {
-            let (deletedAlbum, index) = undoStack.removeAtIndex(0)
+            let (deletedAlbum, index) = undoStack.remove(at: 0)
             addAlbumAtIndex(deletedAlbum, index: index)
         }
         if undoStack.count == 0 {
-            var undoButton: UIBarButtonItem = barButtonItems[0]
-            undoButton.enabled = false
+            let undoButton: UIBarButtonItem = barButtonItems[0]
+            undoButton.isEnabled = false
         }
         let trashButton : UIBarButtonItem = barButtonItems[2]
-        trashButton.enabled = true
+        trashButton.isEnabled = true
     }
 
 }
+
+
 

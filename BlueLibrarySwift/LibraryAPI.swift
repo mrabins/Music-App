@@ -10,9 +10,9 @@ import UIKit
 
 class LibraryAPI: NSObject {
     
-    private let persistencyManager: PersistencyManager
-    private let httpClient: HTTPClient
-    private let isOnline: Bool
+    fileprivate let persistencyManager: PersistencyManager
+    fileprivate let httpClient: HTTPClient
+    fileprivate let isOnline: Bool
     
     override init() {
         persistencyManager = PersistencyManager()
@@ -21,11 +21,11 @@ class LibraryAPI: NSObject {
         
         super.init()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LibraryAPI.downloadImage(_:)), name: "BLDownloadImageNotification", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LibraryAPI.downloadImage(_:)), name: NSNotification.Name(rawValue: "BLDownloadImageNotification"), object: nil)
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     class var sharedInstance: LibraryAPI {
@@ -40,23 +40,23 @@ class LibraryAPI: NSObject {
         return persistencyManager.getAlbums()
     }
     
-    func addAlbum(album: Album, index: Int) {
+    func addAlbum(_ album: Album, index: Int) {
         persistencyManager.addAlbum(album, index: index)
         if isOnline {
             httpClient.postRequest("/api/addAlbum", body: album.description)
         }
     }
     
-    func deleteAlbum(index: Int) {
+    func deleteAlbum(_ index: Int) {
         persistencyManager.deleteAlbumAtIndex(index)
         if isOnline {
             httpClient.postRequest("/api/deleteAlbum", body: "\(index)")
         }
     }
     
-    func downloadImage(notification: NSNotification) {
+    func downloadImage(_ notification: Notification) {
         //1
-        let userInfo = notification.userInfo as! [String: AnyObject]
+        let userInfo = (notification as NSNotification).userInfo as! [String: AnyObject]
         let imageView = userInfo["imageView"] as! UIImageView?
         let coverUrl = userInfo["coverUrl"] as! String
         
@@ -65,10 +65,10 @@ class LibraryAPI: NSObject {
             imageViewUnWrapped.image = persistencyManager.getImage((coverUrl as NSString).lastPathComponent)
             if imageViewUnWrapped.image == nil {
                 //3
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+                DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: { () -> Void in
                     let downloadedImage = self.httpClient.downloadImage(coverUrl as String)
                     //4
-                    dispatch_sync(dispatch_get_main_queue(), { () -> Void in
+                    DispatchQueue.main.sync(execute: { () -> Void in
                         imageViewUnWrapped.image = downloadedImage
                         self.persistencyManager.saveImage(downloadedImage, filename: (coverUrl as NSString).lastPathComponent)
                     })

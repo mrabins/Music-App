@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "c34597fd5c02027005337bd604f9dc99"
+build_time: [527660183, 614863000]
+inputs:
+  "/Users/markrabins/Documents/DevStuff/iOS/Swift/BlueLibrarySwift/BlueLibrarySwiftTests/BlueLibrarySwiftTests.swift": [9223372036854775807, 0]

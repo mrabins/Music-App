@@ -1,0 +1,120 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HTTPClient"
+provides-nominal:
+- "C16BlueLibrarySwift10HTTPClient"
+provides-member:
+- ["C16BlueLibrarySwift10HTTPClient", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "CastingPrecedence"
+- "String"
+- "UIImage"
+- "HTTPClient"
+- "AnyObject"
+- !private "Data"
+- !private "URL"
+depends-member:
+- !private ["Ps9AnyObject", "Data"]
+- !private ["Ps9AnyObject", "UIImage"]
+- !private ["Ps9AnyObject", "URL"]
+- ["Ps9AnyObject", "deinit"]
+- !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps23BidirectionalCollection", "init"]
+- !private ["Ps22BidirectionalIndexable", "init"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps10Collection", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- ["V10Foundation4Data", "deinit"]
+- !private ["V10Foundation4Data", "init"]
+- !private ["Ps9Equatable", "init"]
+- ["C16BlueLibrarySwift10HTTPClient", "AnyObject"]
+- !private ["C16BlueLibrarySwift10HTTPClient", "Data"]
+- ["C16BlueLibrarySwift10HTTPClient", "String"]
+- ["C16BlueLibrarySwift10HTTPClient", "UIImage"]
+- !private ["C16BlueLibrarySwift10HTTPClient", "URL"]
+- ["C16BlueLibrarySwift10HTTPClient", "deinit"]
+- ["C16BlueLibrarySwift10HTTPClient", "downloadImage"]
+- ["C16BlueLibrarySwift10HTTPClient", "getRequest"]
+- ["C16BlueLibrarySwift10HTTPClient", "init"]
+- ["C16BlueLibrarySwift10HTTPClient", "postRequest"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Ps13IndexableBase", "init"]
+- !private ["Ps17MutableCollection", "init"]
+- !private ["Ps16MutableIndexable", "init"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["CSo8NSObject", "init"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
+- ["Sq", "deinit"]
+- !private ["Ps22RandomAccessCollection", "init"]
+- !private ["Ps21RandomAccessIndexable", "init"]
+- !private ["Ps26RangeReplaceableCollection", "init"]
+- !private ["Ps25RangeReplaceableIndexable", "init"]
+- !private ["P10Foundation20ReferenceConvertible", "init"]
+- !private ["Ps8Sequence", "init"]
+- ["SS", "deinit"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- ["CSo7UIImage", "deinit"]
+- !private ["CSo7UIImage", "init"]
+- ["V10Foundation3URL", "deinit"]
+- !private ["V10Foundation3URL", "init"]
+- !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
+- !private ["Ps26_ExpressibleByImageLiteral", "init"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["P10Foundation18_MutablePairBoxing", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps22BidirectionalIndexable"
+- !private "Ps7CVarArg"
+- !private "Ps10Collection"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- !private "Ps23CustomStringConvertible"
+- "V10Foundation4Data"
+- !private "Ps9Equatable"
+- "C16BlueLibrarySwift10HTTPClient"
+- !private "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Ps17MutableCollection"
+- !private "Ps16MutableIndexable"
+- !private "PSo8NSCoding"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- "Sq"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps21RandomAccessIndexable"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps25RangeReplaceableIndexable"
+- !private "P10Foundation20ReferenceConvertible"
+- !private "Ps8Sequence"
+- "SS"
+- !private "PSo29UIAccessibilityIdentification"
+- "CSo7UIImage"
+- "V10Foundation3URL"
+- !private "Ps34_ExpressibleByFileReferenceLiteral"
+- !private "Ps26_ExpressibleByImageLiteral"
+- !private "Ps9_Hashable"
+- !private "P10Foundation18_MutablePairBoxing"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+interface-hash: "4ce8a6cfa6193feebd3d91fd50d3bb24"

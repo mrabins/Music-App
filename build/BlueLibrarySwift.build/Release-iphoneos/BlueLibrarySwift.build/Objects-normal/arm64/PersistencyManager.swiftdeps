@@ -1,0 +1,663 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PersistencyManager"
+provides-nominal:
+- "C16BlueLibrarySwift18PersistencyManager"
+provides-member:
+- ["C16BlueLibrarySwift18PersistencyManager", ""]
+provides-dynamic-lookup:
+- "getImage"
+- "saveImage"
+- "saveAlbums"
+- "getAlbums"
+- "deleteAlbumAtIndex"
+- "addAlbum"
+- "createPlaceholderAlbum"
+depends-top-level:
+- !private "NSError"
+- "NSObject"
+- "Album"
+- !private "URL"
+- !private "NSKeyedUnarchiver"
+- !private "NSKeyedArchiver"
+- "AssignmentPrecedence"
+- !private "NSHomeDirectory"
+- "CastingPrecedence"
+- "PersistencyManager"
+- !private "Data"
+- !private "Array"
+- "UIImage"
+- !private ">="
+- "Int"
+- "String"
+- !private "UIImagePNGRepresentation"
+- !private "StringLiteralType"
+- !private "+"
+depends-member:
+- ["C16BlueLibrarySwift5Album", "deinit"]
+- !private ["C16BlueLibrarySwift5Album", "init"]
+- ["Ps9AnyObject", "Album"]
+- !private ["Ps9AnyObject", "Data"]
+- !private ["Ps9AnyObject", "NSHomeDirectory"]
+- !private ["Ps9AnyObject", "NSKeyedArchiver"]
+- !private ["Ps9AnyObject", "NSKeyedUnarchiver"]
+- !private ["Ps9AnyObject", "UIImage"]
+- !private ["Ps9AnyObject", "UIImagePNGRepresentation"]
+- !private ["Ps9AnyObject", "URL"]
+- ["Ps9AnyObject", "addAlbum"]
+- ["Ps9AnyObject", "albums"]
+- !private ["Ps9AnyObject", "archivedData"]
+- ["Ps9AnyObject", "createPlaceholderAlbum"]
+- ["Ps9AnyObject", "deleteAlbumAtIndex"]
+- ["Ps9AnyObject", "getAlbums"]
+- ["Ps9AnyObject", "getImage"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "saveAlbums"]
+- ["Ps9AnyObject", "saveImage"]
+- !private ["Ps9AnyObject", "unarchiveObject"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Element"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "IndexDistance"]
+- !private ["Sa", "Iterator"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- ["Sa", "deinit"]
+- ["Sa", "init"]
+- !private ["Sa", "insert"]
+- !private ["Sa", "remove"]
+- !private ["Ps23BidirectionalCollection", "Element"]
+- !private ["Ps23BidirectionalCollection", "Index"]
+- !private ["Ps23BidirectionalCollection", "IndexDistance"]
+- !private ["Ps23BidirectionalCollection", "Iterator"]
+- !private ["Ps23BidirectionalCollection", "_Element"]
+- !private ["Ps23BidirectionalCollection", "append"]
+- !private ["Ps23BidirectionalCollection", "count"]
+- ["Ps23BidirectionalCollection", "init"]
+- !private ["Ps23BidirectionalCollection", "insert"]
+- !private ["Ps23BidirectionalCollection", "remove"]
+- !private ["Ps23BidirectionalCollection", "write"]
+- !private ["Ps22BidirectionalIndexable", "Element"]
+- !private ["Ps22BidirectionalIndexable", "Index"]
+- !private ["Ps22BidirectionalIndexable", "IndexDistance"]
+- !private ["Ps22BidirectionalIndexable", "Iterator"]
+- !private ["Ps22BidirectionalIndexable", "_Element"]
+- !private ["Ps22BidirectionalIndexable", "append"]
+- !private ["Ps22BidirectionalIndexable", "count"]
+- ["Ps22BidirectionalIndexable", "init"]
+- !private ["Ps22BidirectionalIndexable", "insert"]
+- !private ["Ps22BidirectionalIndexable", "remove"]
+- !private ["Ps22BidirectionalIndexable", "write"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- ["Ps7CVarArg", "Album"]
+- !private ["Ps7CVarArg", "Data"]
+- !private ["Ps7CVarArg", "Element"]
+- !private ["Ps7CVarArg", "Index"]
+- !private ["Ps7CVarArg", "IndexDistance"]
+- !private ["Ps7CVarArg", "Iterator"]
+- !private ["Ps7CVarArg", "NSHomeDirectory"]
+- !private ["Ps7CVarArg", "NSKeyedArchiver"]
+- !private ["Ps7CVarArg", "NSKeyedUnarchiver"]
+- !private ["Ps7CVarArg", "UIImage"]
+- !private ["Ps7CVarArg", "UIImagePNGRepresentation"]
+- !private ["Ps7CVarArg", "URL"]
+- !private ["Ps7CVarArg", "_Element"]
+- ["Ps7CVarArg", "addAlbum"]
+- ["Ps7CVarArg", "albums"]
+- !private ["Ps7CVarArg", "append"]
+- !private ["Ps7CVarArg", "archivedData"]
+- !private ["Ps7CVarArg", "count"]
+- ["Ps7CVarArg", "createPlaceholderAlbum"]
+- ["Ps7CVarArg", "deleteAlbumAtIndex"]
+- ["Ps7CVarArg", "getAlbums"]
+- ["Ps7CVarArg", "getImage"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "insert"]
+- !private ["Ps7CVarArg", "remove"]
+- ["Ps7CVarArg", "saveAlbums"]
+- ["Ps7CVarArg", "saveImage"]
+- !private ["Ps7CVarArg", "unarchiveObject"]
+- ["Ps7CVarArg", ""]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps10Collection", "Element"]
+- !private ["Ps10Collection", "Index"]
+- !private ["Ps10Collection", "IndexDistance"]
+- !private ["Ps10Collection", "Iterator"]
+- !private ["Ps10Collection", "_Element"]
+- !private ["Ps10Collection", "append"]
+- !private ["Ps10Collection", "count"]
+- ["Ps10Collection", "init"]
+- !private ["Ps10Collection", "insert"]
+- !private ["Ps10Collection", "remove"]
+- !private ["Ps10Collection", "write"]
+- !private ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "Album"]
+- !private ["Ps28CustomDebugStringConvertible", "Data"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
+- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
+- !private ["Ps28CustomDebugStringConvertible", "NSHomeDirectory"]
+- !private ["Ps28CustomDebugStringConvertible", "NSKeyedArchiver"]
+- !private ["Ps28CustomDebugStringConvertible", "NSKeyedUnarchiver"]
+- !private ["Ps28CustomDebugStringConvertible", "UIImage"]
+- !private ["Ps28CustomDebugStringConvertible", "UIImagePNGRepresentation"]
+- !private ["Ps28CustomDebugStringConvertible", "URL"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- ["Ps28CustomDebugStringConvertible", "addAlbum"]
+- ["Ps28CustomDebugStringConvertible", "albums"]
+- !private ["Ps28CustomDebugStringConvertible", "append"]
+- !private ["Ps28CustomDebugStringConvertible", "archivedData"]
+- !private ["Ps28CustomDebugStringConvertible", "count"]
+- ["Ps28CustomDebugStringConvertible", "createPlaceholderAlbum"]
+- ["Ps28CustomDebugStringConvertible", "deleteAlbumAtIndex"]
+- ["Ps28CustomDebugStringConvertible", "getAlbums"]
+- ["Ps28CustomDebugStringConvertible", "getImage"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "insert"]
+- !private ["Ps28CustomDebugStringConvertible", "remove"]
+- ["Ps28CustomDebugStringConvertible", "saveAlbums"]
+- ["Ps28CustomDebugStringConvertible", "saveImage"]
+- ["Ps28CustomDebugStringConvertible", "some"]
+- !private ["Ps28CustomDebugStringConvertible", "unarchiveObject"]
+- !private ["Ps28CustomDebugStringConvertible", "write"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "Element"]
+- !private ["Ps17CustomReflectable", "Index"]
+- !private ["Ps17CustomReflectable", "IndexDistance"]
+- !private ["Ps17CustomReflectable", "Iterator"]
+- !private ["Ps17CustomReflectable", "_Element"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "append"]
+- !private ["Ps17CustomReflectable", "count"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "insert"]
+- !private ["Ps17CustomReflectable", "remove"]
+- ["Ps17CustomReflectable", "some"]
+- !private ["Ps17CustomReflectable", "write"]
+- ["Ps23CustomStringConvertible", "Album"]
+- !private ["Ps23CustomStringConvertible", "Data"]
+- !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IndexDistance"]
+- !private ["Ps23CustomStringConvertible", "Iterator"]
+- !private ["Ps23CustomStringConvertible", "NSHomeDirectory"]
+- !private ["Ps23CustomStringConvertible", "NSKeyedArchiver"]
+- !private ["Ps23CustomStringConvertible", "NSKeyedUnarchiver"]
+- !private ["Ps23CustomStringConvertible", "UIImage"]
+- !private ["Ps23CustomStringConvertible", "UIImagePNGRepresentation"]
+- !private ["Ps23CustomStringConvertible", "URL"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "addAlbum"]
+- ["Ps23CustomStringConvertible", "albums"]
+- !private ["Ps23CustomStringConvertible", "append"]
+- !private ["Ps23CustomStringConvertible", "archivedData"]
+- !private ["Ps23CustomStringConvertible", "count"]
+- ["Ps23CustomStringConvertible", "createPlaceholderAlbum"]
+- ["Ps23CustomStringConvertible", "deleteAlbumAtIndex"]
+- ["Ps23CustomStringConvertible", "getAlbums"]
+- ["Ps23CustomStringConvertible", "getImage"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "insert"]
+- !private ["Ps23CustomStringConvertible", "remove"]
+- ["Ps23CustomStringConvertible", "saveAlbums"]
+- ["Ps23CustomStringConvertible", "saveImage"]
+- !private ["Ps23CustomStringConvertible", "unarchiveObject"]
+- !private ["Ps23CustomStringConvertible", "write"]
+- ["Ps23CustomStringConvertible", ""]
+- ["V10Foundation4Data", "deinit"]
+- !private ["V10Foundation4Data", "init"]
+- !private ["V10Foundation4Data", "write"]
+- !private ["Sd", "deinit"]
+- ["Ps9Equatable", "Album"]
+- !private ["Ps9Equatable", "Data"]
+- !private ["Ps9Equatable", "Element"]
+- !private ["Ps9Equatable", "NSHomeDirectory"]
+- !private ["Ps9Equatable", "NSKeyedArchiver"]
+- !private ["Ps9Equatable", "NSKeyedUnarchiver"]
+- !private ["Ps9Equatable", "UIImage"]
+- !private ["Ps9Equatable", "UIImagePNGRepresentation"]
+- !private ["Ps9Equatable", "URL"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "addAlbum"]
+- ["Ps9Equatable", "albums"]
+- !private ["Ps9Equatable", "archivedData"]
+- !private ["Ps9Equatable", "atomic"]
+- ["Ps9Equatable", "createPlaceholderAlbum"]
+- ["Ps9Equatable", "deleteAlbumAtIndex"]
+- ["Ps9Equatable", "getAlbums"]
+- ["Ps9Equatable", "getImage"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "saveAlbums"]
+- ["Ps9Equatable", "saveImage"]
+- !private ["Ps9Equatable", "unarchiveObject"]
+- !private ["Ps9Equatable", "uncachedRead"]
+- !private ["Ps9Equatable", "write"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "Element"]
+- !private ["Ps25ExpressibleByArrayLiteral", "Index"]
+- !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
+- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
+- !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
+- !private ["Ps25ExpressibleByArrayLiteral", "append"]
+- !private ["Ps25ExpressibleByArrayLiteral", "atomic"]
+- !private ["Ps25ExpressibleByArrayLiteral", "count"]
+- ["Ps25ExpressibleByArrayLiteral", "init"]
+- !private ["Ps25ExpressibleByArrayLiteral", "insert"]
+- !private ["Ps25ExpressibleByArrayLiteral", "remove"]
+- !private ["Ps25ExpressibleByArrayLiteral", "uncachedRead"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps23ExpressibleByNilLiteral", "some"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Sf", "deinit"]
+- ["Ps8Hashable", "Album"]
+- !private ["Ps8Hashable", "Data"]
+- !private ["Ps8Hashable", "NSHomeDirectory"]
+- !private ["Ps8Hashable", "NSKeyedArchiver"]
+- !private ["Ps8Hashable", "NSKeyedUnarchiver"]
+- !private ["Ps8Hashable", "UIImage"]
+- !private ["Ps8Hashable", "UIImagePNGRepresentation"]
+- !private ["Ps8Hashable", "URL"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "addAlbum"]
+- ["Ps8Hashable", "albums"]
+- !private ["Ps8Hashable", "archivedData"]
+- ["Ps8Hashable", "createPlaceholderAlbum"]
+- ["Ps8Hashable", "deleteAlbumAtIndex"]
+- ["Ps8Hashable", "getAlbums"]
+- ["Ps8Hashable", "getImage"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "saveAlbums"]
+- ["Ps8Hashable", "saveImage"]
+- !private ["Ps8Hashable", "unarchiveObject"]
+- !private ["Ps8Hashable", "write"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Element"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "IndexDistance"]
+- !private ["Ps9Indexable", "Iterator"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "append"]
+- !private ["Ps9Indexable", "count"]
+- ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "insert"]
+- !private ["Ps9Indexable", "remove"]
+- !private ["Ps9Indexable", "write"]
+- !private ["Ps13IndexableBase", "Element"]
+- !private ["Ps13IndexableBase", "Index"]
+- !private ["Ps13IndexableBase", "IndexDistance"]
+- !private ["Ps13IndexableBase", "Iterator"]
+- !private ["Ps13IndexableBase", "_Element"]
+- !private ["Ps13IndexableBase", "append"]
+- !private ["Ps13IndexableBase", "count"]
+- ["Ps13IndexableBase", "init"]
+- !private ["Ps13IndexableBase", "insert"]
+- !private ["Ps13IndexableBase", "remove"]
+- !private ["Ps13IndexableBase", "write"]
+- !private ["Vs16IndexingIterator", "Element"]
+- ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps16IteratorProtocol", "Element"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "Element"]
+- !private ["Ps17MutableCollection", "Index"]
+- !private ["Ps17MutableCollection", "IndexDistance"]
+- !private ["Ps17MutableCollection", "Iterator"]
+- !private ["Ps17MutableCollection", "_Element"]
+- !private ["Ps17MutableCollection", "append"]
+- !private ["Ps17MutableCollection", "count"]
+- ["Ps17MutableCollection", "init"]
+- !private ["Ps17MutableCollection", "insert"]
+- !private ["Ps17MutableCollection", "remove"]
+- !private ["Ps17MutableCollection", "write"]
+- !private ["Ps16MutableIndexable", "Element"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "IndexDistance"]
+- !private ["Ps16MutableIndexable", "Iterator"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "append"]
+- !private ["Ps16MutableIndexable", "count"]
+- ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableIndexable", "insert"]
+- !private ["Ps16MutableIndexable", "remove"]
+- !private ["Ps16MutableIndexable", "write"]
+- !private ["CSo7NSCoder", "archivedData"]
+- !private ["CSo7NSCoder", "unarchiveObject"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo9NSCopying", "init"]
+- ["CSo7NSError", "deinit"]
+- !private ["CSo15NSKeyedArchiver", "archivedData"]
+- !private ["CSo17NSKeyedUnarchiver", "unarchiveObject"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Album"]
+- !private ["CSo8NSObject", "Data"]
+- ["CSo8NSObject", "Int"]
+- !private ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "NSHomeDirectory"]
+- !private ["CSo8NSObject", "NSKeyedArchiver"]
+- !private ["CSo8NSObject", "NSKeyedUnarchiver"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIImage"]
+- !private ["CSo8NSObject", "UIImagePNGRepresentation"]
+- !private ["CSo8NSObject", "URL"]
+- ["CSo8NSObject", "addAlbum"]
+- ["CSo8NSObject", "albums"]
+- !private ["CSo8NSObject", "archivedData"]
+- ["CSo8NSObject", "createPlaceholderAlbum"]
+- ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "deleteAlbumAtIndex"]
+- ["CSo8NSObject", "getAlbums"]
+- ["CSo8NSObject", "getImage"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "saveAlbums"]
+- ["CSo8NSObject", "saveImage"]
+- !private ["CSo8NSObject", "unarchiveObject"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "Album"]
+- !private ["PSo16NSObjectProtocol", "Data"]
+- !private ["PSo16NSObjectProtocol", "NSHomeDirectory"]
+- !private ["PSo16NSObjectProtocol", "NSKeyedArchiver"]
+- !private ["PSo16NSObjectProtocol", "NSKeyedUnarchiver"]
+- !private ["PSo16NSObjectProtocol", "UIImage"]
+- !private ["PSo16NSObjectProtocol", "UIImagePNGRepresentation"]
+- !private ["PSo16NSObjectProtocol", "URL"]
+- ["PSo16NSObjectProtocol", "addAlbum"]
+- ["PSo16NSObjectProtocol", "albums"]
+- !private ["PSo16NSObjectProtocol", "archivedData"]
+- ["PSo16NSObjectProtocol", "createPlaceholderAlbum"]
+- ["PSo16NSObjectProtocol", "deleteAlbumAtIndex"]
+- ["PSo16NSObjectProtocol", "getAlbums"]
+- ["PSo16NSObjectProtocol", "getImage"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "saveAlbums"]
+- ["PSo16NSObjectProtocol", "saveImage"]
+- !private ["PSo16NSObjectProtocol", "unarchiveObject"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["Ps9OptionSet", "Element"]
+- !private ["Ps9OptionSet", "atomic"]
+- !private ["Ps9OptionSet", "uncachedRead"]
+- ["Sq", "deinit"]
+- ["Sq", "some"]
+- ["C16BlueLibrarySwift18PersistencyManager", "Album"]
+- !private ["C16BlueLibrarySwift18PersistencyManager", "Data"]
+- ["C16BlueLibrarySwift18PersistencyManager", "Int"]
+- !private ["C16BlueLibrarySwift18PersistencyManager", "NSError"]
+- !private ["C16BlueLibrarySwift18PersistencyManager", "NSHomeDirectory"]
+- !private ["C16BlueLibrarySwift18PersistencyManager", "NSKeyedArchiver"]
+- !private ["C16BlueLibrarySwift18PersistencyManager", "NSKeyedUnarchiver"]
+- ["C16BlueLibrarySwift18PersistencyManager", "String"]
+- ["C16BlueLibrarySwift18PersistencyManager", "UIImage"]
+- !private ["C16BlueLibrarySwift18PersistencyManager", "UIImagePNGRepresentation"]
+- !private ["C16BlueLibrarySwift18PersistencyManager", "URL"]
+- ["C16BlueLibrarySwift18PersistencyManager", "addAlbum"]
+- !private ["C16BlueLibrarySwift18PersistencyManager", "albums"]
+- ["C16BlueLibrarySwift18PersistencyManager", "createPlaceholderAlbum"]
+- ["C16BlueLibrarySwift18PersistencyManager", "deinit"]
+- ["C16BlueLibrarySwift18PersistencyManager", "deleteAlbumAtIndex"]
+- ["C16BlueLibrarySwift18PersistencyManager", "getAlbums"]
+- ["C16BlueLibrarySwift18PersistencyManager", "getImage"]
+- ["C16BlueLibrarySwift18PersistencyManager", "init"]
+- ["C16BlueLibrarySwift18PersistencyManager", "saveAlbums"]
+- ["C16BlueLibrarySwift18PersistencyManager", "saveImage"]
+- !private ["Ps22RandomAccessCollection", "Element"]
+- !private ["Ps22RandomAccessCollection", "Index"]
+- !private ["Ps22RandomAccessCollection", "IndexDistance"]
+- !private ["Ps22RandomAccessCollection", "Iterator"]
+- !private ["Ps22RandomAccessCollection", "_Element"]
+- !private ["Ps22RandomAccessCollection", "append"]
+- !private ["Ps22RandomAccessCollection", "count"]
+- ["Ps22RandomAccessCollection", "init"]
+- !private ["Ps22RandomAccessCollection", "insert"]
+- !private ["Ps22RandomAccessCollection", "remove"]
+- !private ["Ps22RandomAccessCollection", "write"]
+- !private ["Ps21RandomAccessIndexable", "Element"]
+- !private ["Ps21RandomAccessIndexable", "Index"]
+- !private ["Ps21RandomAccessIndexable", "IndexDistance"]
+- !private ["Ps21RandomAccessIndexable", "Iterator"]
+- !private ["Ps21RandomAccessIndexable", "_Element"]
+- !private ["Ps21RandomAccessIndexable", "append"]
+- !private ["Ps21RandomAccessIndexable", "count"]
+- ["Ps21RandomAccessIndexable", "init"]
+- !private ["Ps21RandomAccessIndexable", "insert"]
+- !private ["Ps21RandomAccessIndexable", "remove"]
+- !private ["Ps21RandomAccessIndexable", "write"]
+- !private ["Ps26RangeReplaceableCollection", "Element"]
+- !private ["Ps26RangeReplaceableCollection", "Index"]
+- !private ["Ps26RangeReplaceableCollection", "IndexDistance"]
+- !private ["Ps26RangeReplaceableCollection", "Iterator"]
+- !private ["Ps26RangeReplaceableCollection", "_Element"]
+- !private ["Ps26RangeReplaceableCollection", "append"]
+- !private ["Ps26RangeReplaceableCollection", "count"]
+- ["Ps26RangeReplaceableCollection", "init"]
+- !private ["Ps26RangeReplaceableCollection", "insert"]
+- !private ["Ps26RangeReplaceableCollection", "remove"]
+- !private ["Ps26RangeReplaceableCollection", "write"]
+- !private ["Ps25RangeReplaceableIndexable", "Element"]
+- !private ["Ps25RangeReplaceableIndexable", "Index"]
+- !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
+- !private ["Ps25RangeReplaceableIndexable", "Iterator"]
+- !private ["Ps25RangeReplaceableIndexable", "_Element"]
+- !private ["Ps25RangeReplaceableIndexable", "append"]
+- !private ["Ps25RangeReplaceableIndexable", "count"]
+- ["Ps25RangeReplaceableIndexable", "init"]
+- !private ["Ps25RangeReplaceableIndexable", "insert"]
+- !private ["Ps25RangeReplaceableIndexable", "remove"]
+- !private ["Ps25RangeReplaceableIndexable", "write"]
+- !private ["Ps16RawRepresentable", "Element"]
+- !private ["Ps16RawRepresentable", "atomic"]
+- !private ["Ps16RawRepresentable", "uncachedRead"]
+- ["VCSo6NSData14ReadingOptions", "deinit"]
+- !private ["VCSo6NSData14ReadingOptions", "uncachedRead"]
+- !private ["P10Foundation20ReferenceConvertible", "init"]
+- !private ["P10Foundation20ReferenceConvertible", "write"]
+- !private ["Ps8Sequence", "Element"]
+- !private ["Ps8Sequence", "Index"]
+- !private ["Ps8Sequence", "IndexDistance"]
+- !private ["Ps8Sequence", "Iterator"]
+- !private ["Ps8Sequence", "_Element"]
+- !private ["Ps8Sequence", "append"]
+- !private ["Ps8Sequence", "count"]
+- ["Ps8Sequence", "init"]
+- !private ["Ps8Sequence", "insert"]
+- !private ["Ps8Sequence", "remove"]
+- !private ["Ps8Sequence", "write"]
+- !private ["Ps10SetAlgebra", "Element"]
+- !private ["Ps10SetAlgebra", "atomic"]
+- !private ["Ps10SetAlgebra", "uncachedRead"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- ["CSo7UIImage", "deinit"]
+- !private ["CSo7UIImage", "init"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- ["V10Foundation3URL", "deinit"]
+- !private ["V10Foundation3URL", "init"]
+- !private ["Sc", "deinit"]
+- !private ["VCSo6NSData14WritingOptions", "Element"]
+- !private ["VCSo6NSData14WritingOptions", "atomic"]
+- ["VCSo6NSData14WritingOptions", "deinit"]
+- !private ["Ps14_ArrayProtocol", "Element"]
+- !private ["Ps14_ArrayProtocol", "Index"]
+- !private ["Ps14_ArrayProtocol", "IndexDistance"]
+- !private ["Ps14_ArrayProtocol", "Iterator"]
+- !private ["Ps14_ArrayProtocol", "_Element"]
+- !private ["Ps14_ArrayProtocol", "append"]
+- !private ["Ps14_ArrayProtocol", "count"]
+- ["Ps14_ArrayProtocol", "init"]
+- !private ["Ps14_ArrayProtocol", "insert"]
+- !private ["Ps14_ArrayProtocol", "remove"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
+- !private ["Ps24_DestructorSafeContainer", "Iterator"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "append"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
+- ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps24_DestructorSafeContainer", "insert"]
+- !private ["Ps24_DestructorSafeContainer", "remove"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
+- !private ["Ps26_ExpressibleByImageLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "Album"]
+- !private ["Ps9_Hashable", "Data"]
+- !private ["Ps9_Hashable", "NSHomeDirectory"]
+- !private ["Ps9_Hashable", "NSKeyedArchiver"]
+- !private ["Ps9_Hashable", "NSKeyedUnarchiver"]
+- !private ["Ps9_Hashable", "UIImage"]
+- !private ["Ps9_Hashable", "UIImagePNGRepresentation"]
+- !private ["Ps9_Hashable", "URL"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "addAlbum"]
+- ["Ps9_Hashable", "albums"]
+- !private ["Ps9_Hashable", "archivedData"]
+- ["Ps9_Hashable", "createPlaceholderAlbum"]
+- ["Ps9_Hashable", "deleteAlbumAtIndex"]
+- ["Ps9_Hashable", "getAlbums"]
+- ["Ps9_Hashable", "getImage"]
+- ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "saveAlbums"]
+- ["Ps9_Hashable", "saveImage"]
+- !private ["Ps9_Hashable", "unarchiveObject"]
+- !private ["Ps9_Hashable", "write"]
+- ["Ps9_Hashable", ""]
+- !private ["P10Foundation18_MutablePairBoxing", "init"]
+- !private ["P10Foundation18_MutablePairBoxing", "write"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "append"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "insert"]
+- !private ["Ps21_ObjectiveCBridgeable", "remove"]
+- !private ["Ps21_ObjectiveCBridgeable", "write"]
+depends-nominal:
+- "C16BlueLibrarySwift5Album"
+- "Ps9AnyObject"
+- "Sa"
+- "Ps23BidirectionalCollection"
+- "Ps22BidirectionalIndexable"
+- "Sb"
+- "Ps7CVarArg"
+- !private "Vs9Character"
+- "Ps10Collection"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "V10Foundation4Data"
+- !private "Sd"
+- "Ps9Equatable"
+- "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps23ExpressibleByNilLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Sf"
+- "Ps8Hashable"
+- "Ps9Indexable"
+- "Ps13IndexableBase"
+- !private "Vs16IndexingIterator"
+- "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps16IteratorProtocol"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- "Ps17MutableCollection"
+- "Ps16MutableIndexable"
+- !private "CSo7NSCoder"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo7NSError"
+- !private "CSo15NSKeyedArchiver"
+- !private "CSo17NSKeyedUnarchiver"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "Ps9OptionSet"
+- "Sq"
+- "C16BlueLibrarySwift18PersistencyManager"
+- "Ps22RandomAccessCollection"
+- "Ps21RandomAccessIndexable"
+- "Ps26RangeReplaceableCollection"
+- "Ps25RangeReplaceableIndexable"
+- !private "Ps16RawRepresentable"
+- "VCSo6NSData14ReadingOptions"
+- !private "P10Foundation20ReferenceConvertible"
+- "Ps8Sequence"
+- !private "Ps10SetAlgebra"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- "CSo7UIImage"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- "V10Foundation3URL"
+- !private "Sc"
+- "VCSo6NSData14WritingOptions"
+- "Ps14_ArrayProtocol"
+- "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps34_ExpressibleByFileReferenceLiteral"
+- !private "Ps26_ExpressibleByImageLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "P10Foundation18_MutablePairBoxing"
+- "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+interface-hash: "f3811cd382b8eef2f69fd37c5a494e23"
